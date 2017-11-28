@@ -14,7 +14,9 @@
 
       <header class="main-header">
         <div class="search"><!--search div-->
-        <input type="text" id="myInput" onkeyup="myFunction()" name="img_search" placeholder="Search the photo gallery">
+        <form>
+          <input type="text" id="myInput" onkeyup="myFunction()" name="img_search" placeholder="Search the photo gallery">
+        </form>
       </div><!--/search div-->
       </header><!--/.main-header-->
 
@@ -96,7 +98,7 @@ I walked through this meadow of bluebells and got a good view of the snow on the
     // Loop through all a items, and hide those who don't match the search query
     for (var i = 0; i < a.length; i++) {
         caption = document.getElementsByTagName("a")[0].getAttribute("data-title");
-        if (caption.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        if (caption.toLowerCase().indexOf(filter) > -1) {
             caption[i].style.display = "";
         } else {
             caption[i].style.display = "none";
