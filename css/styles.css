@@ -4,126 +4,60 @@
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', serif;
   width: 100%;
-  min-width: 320px;/*is this OK to do?*/
   margin: 0 auto;
-  background: #ffffff;
-  color: black;
+  background: #b3b3b3;
   line-height: 1.2em;
 }
 
-
 .main-header {
-  background: firebrick;
+  background: white;
   width: 100%;
-  height: 70px;
-  margin-bottom: 30px;
+  margin: 0 auto;/*do i need this? It doesn't seem to be inherited from body?*/
   text-align: center;
-  text-transform: uppercase;
   color: white;
 }
 
-.wrapper {
+.gallery-container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  min-height: 100vh;/*is this OK to do?*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   background: #ffffff;
-  width: 90%;
+  width: 100%;
+  padding: 10px;
   margin: 0 auto;
   text-align: center;
 }
 
-.footer {
-  text-align: center;
-  width: 95%;
-  margin: 0 auto 100px;
-  font-style: italic;
+.img-container {
+  padding: 20px 20px;
 }
 
-h1 {
-  margin: 0;
-  padding: 30px 30px;
-  font-size: 1.1em;
-  font-weight: lighter;
-}
-
-h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 0;
-
-}
-
-p {
+/*p {
   color: #bfbfbf;
   font-weight: 100;
   font-size: .8em;
   padding: 0 15px 15px 15px;
   line-height: 1.6em;
-}
+}*/
 
-fieldset p {
-  padding: 0;
-  color: gray;
-  font-size: .9em;
-  line-height: 1.6em;
-}
-
-
-hr {
-  width: 95%;
-  height: 3px;
-  color: black;
-  background-color: black;
-/*  margin-bottom: 20px;*/
-}
-
-/*this rule is for my second hr before "contact info"*/
-#skinny {
-  height: 1px;
-  margin-top: -5px;
-}
-
-/*this rule is for my hr before "newsletter"*/
-#hr-lower {
-/*  width: 100%;*/
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 100%;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
-/*  background: rgba(255, 255, 255, .1);*/
-  border: none;
+input[type="text"] {
+  border: solid 1px gray;
   border-radius: 5px;
   font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
+/*  height: auto;*/
+  margin-top: 30px;
   padding: 15px;
-  width: 100%;
-  background: #edeeef;
+  width: 45%;
+  background: #eaeef1;
   color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
+
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+input[type="text"] {
   transition: all 1s;
 }
 
@@ -133,34 +67,8 @@ input:focus, textarea:focus {
     background: ivory;
 }
 
-textarea {
-  height: 100px;
-}
-
-#other_topics {
-  margin-bottom: 0px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 0 10px 8px 0;
-}
-
-#zip {
-  width: 200px;
-  display: block;
-}
-
-select {
-  padding: 6px;
-  height: 50px;
-  font-family: 'Merriweather';
-  color: gray;
-  font-size: .8em;
-}
-
 button {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', serif;
   padding: 19px 39px 18px 39px;
   color: #FFF;
   background-color: #45b3ac;
@@ -176,80 +84,37 @@ button {
   margin-top: 20px;
 }
 
-fieldset {
-  margin-bottom: 15px;
-  border: none;
-}
-
-legend {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-label {
-  display: inline-block;
-  color: gray;
-  margin-bottom: 8px;
-  font-weight: lighter;
-  font-size: .8em;
-}
 
 
-option.light,
-label.light {
-  font-weight: 100;
-  font-size: .9em;
-  display: inline;
-}
+
 
 
 /* Media query
    ========================================================================== */
 
+/*@media (min-width: 500px) and (max-width: 767px) {
+
+
+.flex-item {
+    flex: 1 50%;
+  }
+
+}*/
+
+
 @media (min-width: 768px) {
 
-  .container {
-    display: flex;
-/*    flex-direction: row;*/
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-/*    margin: 0 auto;*/
-/*    width: 95%;*/
+.flex-item {
+    flex: 1 33%;
   }
 
-  .wrapper {
-    width: 90%;
-    max-width: 700px;
-  }
+}
 
-  body {
-    background-color: #ffffff;
-  }
+@media (min-width: 1024px) {
 
-  .flex-label {
+.flex-item {
     flex: 1 25%;
-
   }
-
-.flex-input,
-.flex-select {
-  flex: 1 75%;
-}
-
-.flex-label-zip,
-.flex-input-zip {
-  flex: 0 25%;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-  margin-top: 30px;
-}
 
 }
 
@@ -258,7 +123,7 @@ select {
 
 input::placeholder {
   color: gray;
-  text-align: right;
+  text-align: left;
   font-size: .7em;
-  font-style: italic;
+/*  font-style: italic;*/
 }
