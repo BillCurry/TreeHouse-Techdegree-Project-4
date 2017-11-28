@@ -16,7 +16,7 @@ body {
   width: 100%;
   margin: 0 auto;/*do i need this? It doesn't seem to be inherited from body?*/
   text-align: center;
-  color: white;
+/*  color: white;*/
 }
 
 .gallery-container {
@@ -54,7 +54,6 @@ input[type="text"] {
   width: 45%;
   background: #eaeef1;
   color: #8a97a0;
-
 }
 
 input[type="text"] {
@@ -67,22 +66,7 @@ input:focus, textarea:focus {
     background: ivory;
 }
 
-/*button {
-  font-family: 'Roboto', serif;
-  padding: 19px 39px 18px 39px;
-  color: #FFF;
-  background-color: #45b3ac;
-  font-size: 18px;
-  text-align: center;
-  font-style: normal;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid #91d4d0;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-  margin-bottom: 10px;
-  margin-top: 20px;
-}*/
+
 
 
 
