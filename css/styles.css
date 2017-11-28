@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-/*    border: solid 1px red;*/
+    border: solid 1px red;
 }
 
 body {
@@ -67,7 +67,7 @@ input:focus, textarea:focus {
     background: ivory;
 }
 
-button {
+/*button {
   font-family: 'Roboto', serif;
   padding: 19px 39px 18px 39px;
   color: #FFF;
@@ -82,7 +82,7 @@ button {
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
   margin-top: 20px;
-}
+}*/
 
 
 
@@ -96,6 +96,7 @@ button {
 
 
 .flex-item {
+    flex-wrap: wrap;
     flex: 1 50%;
   }
 

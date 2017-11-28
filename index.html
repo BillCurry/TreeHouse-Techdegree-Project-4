@@ -14,7 +14,7 @@
 
       <header class="main-header">
         <div class="search"><!--search div-->
-        <input type="text" id="filter-search" name="img_search" placeholder="Search the photo gallery">
+        <input type="text" id="myInput" onkeyup="myFunction()" name="img_search" placeholder="Search the photo gallery">
       </div><!--/search div-->
       </header><!--/.main-header-->
 
@@ -84,6 +84,25 @@ I walked through this meadow of bluebells and got a good view of the snow on the
       </div><!--/Gallery Container-->
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/lightbox/js/lightbox.min.js"></script>
-<!--     <script src="js/main.js"></script> -->
+    <script>
+    function myFunction() {
+    // Declare variables
+    var caption, input, filter, div, a;
+    input = document.getElementById('myInput');
+    filter = input.value.toLowerCase();
+    div = document.getElementsByClassName('image-container');
+    a = document.getElementsByTagName("a");
+
+    // Loop through all a items, and hide those who don't match the search query
+    for (var i = 0; i < a.length; i++) {
+        caption = document.getElementsByTagName("a")[0].getAttribute("data-title");
+        if (caption.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            caption[i].style.display = "";
+        } else {
+            caption[i].style.display = "none";
+        }
+    }
+}
+    </script>
   </body>
 </html>
