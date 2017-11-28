@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+/*    border: solid 1px red;*/
+}
+
+body {
+  font-family: 'Roboto', serif;
+  width: 100%;
+  margin: 0 auto;
+  background: #b3b3b3;
+  line-height: 1.2em;
+}
+
+.main-header {
+  background: white;
+  width: 100%;
+  margin: 0 auto;/*do i need this? It doesn't seem to be inherited from body?*/
+  text-align: center;
+  color: white;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img-container {
+  padding: 20px 20px;
+}
+
+/*p {
+  color: #bfbfbf;
+  font-weight: 100;
+  font-size: .8em;
+  padding: 0 15px 15px 15px;
+  line-height: 1.6em;
+}*/
+
+input[type="text"] {
+  border: solid 1px gray;
+  border-radius: 5px;
+  font-size: 16px;
+/*  height: auto;*/
+  margin-top: 30px;
+  padding: 15px;
+  width: 45%;
+  background: #eaeef1;
+  color: #8a97a0;
+
+}
+
+input[type="text"] {
+  transition: all 1s;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid black;
+    border-radius: 5px;
+    background: ivory;
+}
+
+button {
+  font-family: 'Roboto', serif;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #45b3ac;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #91d4d0;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+/* Media query
+   ========================================================================== */
+
+/*@media (min-width: 500px) and (max-width: 767px) {
+
+
+.flex-item {
+    flex: 1 50%;
+  }
+
+}*/
+
+
+@media (min-width: 768px) {
+
+.flex-item {
+    flex: 1 33%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+.flex-item {
+    flex: 1 25%;
+  }
+
+}
+
+/* Pseudo Classes
+   ========================================================================== */
+
+input::placeholder {
+  color: gray;
+  text-align: left;
+  font-size: .7em;
+/*  font-style: italic;*/
+}
