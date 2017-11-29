@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: solid 1px red;
+/*    border: solid 1px red;*/
 }
 
 body {
@@ -20,16 +20,29 @@ body {
 }
 
 .gallery-container {
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;*/
+  background: #ffffff;
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.myUL {
+    /* Remove default list styling */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  background: #ffffff;
-  width: 100%;
-  padding: 10px;
-  margin: 0 auto;
-  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .img-container {
