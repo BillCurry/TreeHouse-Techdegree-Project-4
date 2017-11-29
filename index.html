@@ -15,7 +15,7 @@
       <header class="main-header">
         <div class="search"><!--search div-->
         <form>
-          <input type="text" id='search' data-list=".myUL" name="img_search" placeholder="Search the photo gallery">
+          <input type="text" id='search' onkeyup="imgSearch()" data-list=".myUL" name="img_search" placeholder="Search the photo gallery">
         </form>
       </div><!--/search div-->
       </header><!--/.main-header-->
@@ -24,8 +24,9 @@
       <div class="gallery-container"><!--Gallery Container-->
 
         <ul class='myUL'><!--UNORDERED LIST BEGINS HERE-->
-          <li class="flex-item" data-title="Hay Bales.<br> I love hay bales. Took this snap on a drive through the countryside past some straw fields."><div class="img-container"><!--Photo 1-->
-            <a href="images/01.jpg" data-lightbox="image-1" data-title="Hay Bales<br>
+          <li class="flex-item" data-title="Hay Bales.<br> I love hay bales. Took this snap on a drive through the countryside past some straw fields."><div class="img-container">
+            <!--Photo 1-->
+            <a href="images/01.jpg" data-lightbox="gallery" data-title="Hay Bales<br>
 I love hay bales. Took this snap on a drive through the countryside past some straw fields."><img src="images/thumbnails/01.jpg" alt="hay bales"></a>
           </div>
          </li>
@@ -33,91 +34,111 @@ I love hay bales. Took this snap on a drive through the countryside past some st
 
           <li class="flex-item" data-title="Lake<br>
 The lake was so calm today. We had a great view of the snow on the mountains from here."><div class="img-container"><!--Photo 2-->
-            <a href="images/02.jpg" data-lightbox="image-2" data-title="Lake<br>
+            <a href="images/02.jpg" data-lightbox="gallery" data-title="Lake<br>
 The lake was so calm today. We had a great view of the snow on the mountains from here."><img src="images/thumbnails/02.jpg"  alt="lake"></a>
           </div><!--/Photo 2-->
         </li>
 
           <li class="flex-item" data-title="Canyon<br>
 I hiked to the top of the mountain and got this picture of the canyon and trees below."><div class="img-container"><!--Photo 3-->
-            <a href="images/03.jpg" data-lightbox="image-3" data-title="Canyon<br>
+            <a href="images/03.jpg" data-lightbox="gallery" data-title="Canyon<br>
 I hiked to the top of the mountain and got this picture of the canyon and trees below."><img src="images/thumbnails/03.jpg" alt="canyon"></a>
           </div><!--/Photo 3-->
         </li>
 
           <li class="flex-item" data-title="Iceberg<br>
 It was amazing to see an iceberg up close, it was so cold but didn’t snow today."><div class="img-container"><!--Photo 4-->
-            <a href="images/04.jpg" data-lightbox="image-4" data-title="Iceberg<br>
+            <a href="images/04.jpg" data-lightbox="gallery" data-title="Iceberg<br>
 It was amazing to see an iceberg up close, it was so cold but didn’t snow today."><img src="images/thumbnails/04.jpg" alt="iceberg"></a>
           </div><!--/Photo 4-->
         </li>
 
           <li class="flex-item" data-title="Desert<br>
 The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."><div class="img-container"><!--Photo 5-->
-            <a href="images/05.jpg" data-lightbox="image-5" data-title="Desert<br>
+            <a href="images/05.jpg" data-lightbox="gallery" data-title="Desert<br>
 The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."><img src="images/thumbnails/05.jpg"  alt="desert"></a>
           </div><!--/Photo 5-->
         </li>
 
           <li class="flex-item" data-title="Fall<br>
 Fall is coming, I love when the leaves on the trees start to change color."><div class="img-container"><!--Photo 6-->
-            <a href="images/06.jpg" data-lightbox="image-6" data-title="Fall<br>
+            <a href="images/06.jpg" data-lightbox="gallery" data-title="Fall<br>
 Fall is coming, I love when the leaves on the trees start to change color."><img src="images/thumbnails/06.jpg" alt="fall"></a>
           </div><!--/Photo 6-->
         </li>
 
           <li class="flex-item" data-title="Plantation<br>
 I drove past this plantation yesterday, everything is so green!"><div class="img-container"><!--Photo 7-->
-            <a href="images/07.jpg" data-lightbox="image-7" data-title="Plantation<br>
+            <a href="images/07.jpg" data-lightbox="gallery" data-title="Plantation<br>
 I drove past this plantation yesterday, everything is so green!"><img src="images/thumbnails/07.jpg" alt="plantation"></a>
           </div><!--/Photo 7-->
         </li>
 
           <li class="flex-item" data-title="Dunes<br>
 My summer vacation to the Oregon Coast. I love the sandy dunes!"><div class="img-container"><!--Photo 8-->
-            <a href="images/08.jpg" data-lightbox="image-8" data-title="Dunes<br>
+            <a href="images/08.jpg" data-lightbox="gallery" data-title="Dunes<br>
 My summer vacation to the Oregon Coast. I love the sandy dunes!"><img src="images/thumbnails/08.jpg"  alt="dunes"></a>
           </div><!--/Photo 8-->
         </li>
 
           <li class="flex-item" data-title="Countryside Lane<br>
 We enjoyed a quiet stroll down this countryside lane. "><div class="img-container"><!--Photo 9-->
-            <a href="images/09.jpg" data-lightbox="image-9" data-title="Countryside Lane<br>
+            <a href="images/09.jpg" data-lightbox="gallery" data-title="Countryside Lane<br>
 We enjoyed a quiet stroll down this countryside lane. "><img src="images/thumbnails/09.jpg" alt="countryside lane"></a>
           </div><!--/Photo 9-->
         </li>
 
           <li class="flex-item" data-title="Sunset
 Sunset at the coast! The sky turned a lovely shade of orange."><div class="img-container"><!--Photo 10-->
-            <a href="images/10.jpg" data-lightbox="image-10" data-title="Sunset
+            <a href="images/10.jpg" data-lightbox="gallery" data-title="Sunset
 Sunset at the coast! The sky turned a lovely shade of orange."><img src="images/thumbnails/10.jpg" alt="sunset"></a>
           </div><!--/Photo 10-->
         </li>
 
           <li class="flex-item" data-title="Cave<br>
 I did a tour of a cave today and the view of the landscape below was breathtaking."><div class="img-container"><!--Photo 11-->
-            <a href="images/11.jpg" data-lightbox="image-11" data-title="Cave<br>
+            <a href="images/11.jpg" data-lightbox="gallery" data-title="Cave<br>
 I did a tour of a cave today and the view of the landscape below was breathtaking."><img src="images/thumbnails/11.jpg" alt="cave"></a>
           </div><!--/Photo 11-->
         </li>
 
           <li class="flex-item" data-title="Bluebells<br>
 I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."><div class="img-container"><!--Photo 12-->
-            <a href="images/12.jpg" data-lightbox="image-12" data-title="Bluebells<br>
+            <a href="images/12.jpg" data-lightbox="gallery" data-title="Bluebells<br>
 I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."><img src="images/thumbnails/12.jpg" alt="bluebells"></a>
           </div><!--/Photo 12-->
         </li>
-
+      </ul>
       </div><!--/Gallery Container-->
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>"
+  crossorigin="anonymous"></script>
     <script src="js/lightbox/js/lightbox.min.js"></script>
      <script src="js/hideseek/jquery.hideseek.min.js"></script>
     <script>
-    $('#search').hideseek({
-      attribute: 'data-title'
-    });
+function imgSearch() {
+    // Declare variables
+    var caption, input, filter, ul, li, a;
+    input = document.getElementById('search');
+    filter = input.value.toLowerCase();
+    ul = document.getElementsByClassName('myUL');
+    li = document.getElementsByTagName("li");
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (var i = 0; i < li.length; i++) {
+        caption = li[i].getAttribute("data-title");
+        if (caption.toLowerCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+    // //======HideSeek plug-in code========
+    //  $('#search').hideseek({
+    // //   attribute: 'data-title'
+    // // });
     </script>
   </body>
 </html>
