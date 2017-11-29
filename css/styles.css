@@ -16,7 +16,6 @@ body {
   width: 100%;
   margin: 0 auto;/*do i need this? It doesn't seem to be inherited from body?*/
   text-align: center;
-/*  color: white;*/
 }
 
 .gallery-container {
@@ -29,12 +28,13 @@ body {
 }
 
 .myUL {
-    /* Remove default list styling */
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+/* Remove default list styling */
   list-style-type: none;
   padding: 0;
   margin: 0;
